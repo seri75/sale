@@ -11,8 +11,8 @@ public class Sales {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
-    private String productName;
     private Integer amt;
+    private String yyyymm;
 
     @PostPersist
     public void onPostPersist(){
@@ -49,19 +49,19 @@ public class Sales {
     public void setId(Long id) {
         this.id = id;
     }
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
     public Integer getAmt() {
         return amt;
     }
 
     public void setAmt(Integer amt) {
         this.amt = amt;
+    }
+    public String getYyyymm() {
+        return yyyymm;
+    }
+
+    public void setYyyymm(String yyyymm) {
+        this.yyyymm = yyyymm;
     }
 
 

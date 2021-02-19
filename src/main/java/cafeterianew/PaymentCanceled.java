@@ -1,4 +1,5 @@
-package CAFETERIANEW;
+
+package cafeterianew;
 
 public class PaymentCanceled extends AbstractEvent {
 
@@ -7,10 +8,6 @@ public class PaymentCanceled extends AbstractEvent {
     private String phoneNumber;
     private Integer amt;
     private String status;
-
-    public PaymentCanceled(){
-        super();
-    }
 
     public Long getId() {
         return id;

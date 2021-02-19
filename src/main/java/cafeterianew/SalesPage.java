@@ -12,6 +12,8 @@ public class SalesPage {
         private Long id;
         private String productName;
         private Integer amt;
+        private String yyyymm;
+        private String phoneNumber;
 
 
         public Long getId() {
@@ -34,6 +36,20 @@ public class SalesPage {
 
         public void setAmt(Integer amt) {
             this.amt = amt;
+        }
+        public String getYyyymm() {
+            return yyyymm;
+        }
+
+        public void setYyyymm(String yyyymm) {
+            this.yyyymm = yyyymm;
+        }
+        public String getPhoneNumber() {
+            return phoneNumber;
+        }
+
+        public void setPhoneNumber(String phoneNumber) {
+            this.phoneNumber = phoneNumber;
         }
 
 }
