@@ -10,7 +10,7 @@ public class SalePage {
         @Id
         @GeneratedValue(strategy=GenerationType.AUTO)
         private Long id;
-        private Integer orderId;
+        private Long orderId;
         private String productName;
         private String phoneNumber;
         private String yyyymm;
@@ -25,11 +25,11 @@ public class SalePage {
         public void setId(Long id) {
             this.id = id;
         }
-        public Integer getOrderId() {
+        public Long getOrderId() {
             return orderId;
         }
 
-        public void setOrderId(Integer orderId) {
+        public void setOrderId(Long orderId) {
             this.orderId = orderId;
         }
         public String getProductName() {

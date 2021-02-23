@@ -1,8 +1,10 @@
 package cafeteria;
 
-import javax.persistence.*;
-import org.springframework.beans.BeanUtils;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name="Sale_table")
@@ -14,21 +16,6 @@ public class Sale {
     private String phoneNumber;
     private String yyyymm;
     private Integer sumAmt;
-
-    @PostUpdate
-    public void onPostUpdate(){
-        SaleAdded saleAdded = new SaleAdded();
-        BeanUtils.copyProperties(this, saleAdded);
-        saleAdded.publishAfterCommit();
-
-
-        SaleSubtracted saleSubtracted = new SaleSubtracted();
-        BeanUtils.copyProperties(this, saleSubtracted);
-        saleSubtracted.publishAfterCommit();
-
-
-    }
-
 
     public Long getId() {
         return id;
