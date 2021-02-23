@@ -8,6 +8,6 @@ import java.util.List;
 public interface SalePageRepository extends CrudRepository<SalePage, Long> {
 
     List<> findByPhoneNumber(String phoneNumber);
-    List<> findByPhoneNumber(String phoneNumber);
+
 
 }
